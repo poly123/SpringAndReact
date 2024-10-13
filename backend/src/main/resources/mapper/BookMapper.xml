@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.killer.firstkill.book.repository.BookMapper">
+
+    <select id="findById" resultType="com.killer.firstkill.book.model.Book">
+        SELECT id, title, author, price, created_at AS createdAt, updated_at AS updatedAt
+        FROM books
+        WHERE id = #{id}
+    </select>
+
+    <insert id="insertBook">
+        INSERT INTO books (id, title, author, price, created_at, updated_at)
+        VALUES (#{id}, #{title}, #{author}, #{price}, #{createdAt}, #{updatedAt})
+    </insert>
+
+</mapper>

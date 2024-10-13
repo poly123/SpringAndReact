@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/killer
+    username: hyun
+    password: guscjf72
+    
+server:
+  servlet:
+    encoding:
+      charset: UTF-8  # 요청과 응답에 UTF-8 인코딩 사용
+      force: true
+    
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml # Mapper XML 파일 경로
